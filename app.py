@@ -1,6 +1,4 @@
-print("Starting application")
+def add(a, b):
+    return a + b
 
-x = 10
-y = 2
-
-print(x / y)
+print(add(5, 3))
