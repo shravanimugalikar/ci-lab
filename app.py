@@ -1,6 +1,6 @@
 print("Starting application")
 
 x = 10
-y = 0
+y = 2
 
 print(x / y)
