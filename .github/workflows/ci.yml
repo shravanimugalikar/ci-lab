@@ -2,9 +2,10 @@ name: Python CI
 
 on:
   push:
+  pull_request:
 
 jobs:
-  run-python:
+  test:
 
     runs-on: ubuntu-latest
 
@@ -14,7 +15,10 @@ jobs:
 
       - uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: "3.11"
 
-      - name: Run Python Script
-        run: python app.py	
+      - name: Install pytest
+        run: pip install pytest
+
+      - name: Run tests
+        run: pytest
